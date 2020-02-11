@@ -3,7 +3,7 @@
 Hack-SocialMedia app auto detects videos and you can download them with just one click. It has in-built download manager which allows you to pause and resume downloads, download in the background, download several files at the same time and rename downloaded file name. Hack-SocialMedia has an in built private browser that helps you to easily search videos from different websites. This app can also be used as whatsapp video status saver along with video downloader.
 
 
-Hey! Here is t the pp Documentation
+Hey! Here is  the App Documentation
 
 Resources
 
