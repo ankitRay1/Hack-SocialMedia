@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.videodownloader.whatsappstatussaver">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:name="com.videodownloader.whatsappstatussaver.VDApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name="com.videodownloader.whatsappstatussaver.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.videodownloader.whatsappstatussaver.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="m.facebook.com" />
+                <data android:host="www.instagram.com" />
+                <data android:host="instagram.com"/>
+                <data android:host="www.dailymotion.com" />
+                <data android:host="dailymotion.com" />
+                <data android:host="vimeo.com" />
+                <data android:host="m.vlive.tv" />
+                <data android:host="www.tumblr.com" />
+                <data android:host="m.twitch.tv" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.videodownloader.whatsappstatussaver.whatsapp_feature.WhatsappStatusView"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name="com.videodownloader.whatsappstatussaver.download_feature.DownloadManager"
+            android:exported="false" />
+
+        <provider
+            android:authorities="com.videodownloader.whatsappstatussaver.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+    </application>
+</manifest>

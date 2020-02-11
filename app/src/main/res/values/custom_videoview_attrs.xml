@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomMediaController">
+        <attr name="uvv_scalable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomVideoView">
+        <attr name="uvv_fitXY" format="boolean" />
+        <attr name="uvv_autoRotation" format="boolean" />
+    </declare-styleable>
+
+</resources>

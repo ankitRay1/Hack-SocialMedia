@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/loadingPageProgress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:progressDrawable="@drawable/loading_page_progress_status"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.videodownloader.whatsappstatussaver.browsing_feature.TouchableWebView
+        android:id="@+id/page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loadingPageProgress"
+        app:layout_constraintVertical_bias="0.0"  />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/videosFoundHUD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:src="@drawable/ic_file_download"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.9">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:id="@+id/foundVideosWindow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_margin="@dimen/_30sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_12sdp"
+            android:background="@drawable/background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/foundVideosClose"
+                android:layout_width="@dimen/icon_dimen"
+                android:layout_height="@dimen/icon_dimen"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/circle"
+                android:src = "@drawable/ic_cancel"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/videoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/window_bg" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/videoFoundTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.videodownloader.whatsappstatussaver.custom_video_view.CustomVideoView
+            android:id="@+id/videoFoundView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:uvv_autoRotation="true"
+            app:uvv_fitXY="false" />
+
+        <com.videodownloader.whatsappstatussaver.custom_video_view.CustomMediaController
+            android:id="@+id/mediaFoundController"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:uvv_scalable="true" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

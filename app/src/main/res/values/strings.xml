@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Hack SocialMedia</string>
+
+    <string name="adMode">1</string> <!-- 0 for fb and 1 for admob -->
+
+    <string name="title_home">Home</string>
+    <string name="title_downloads">Downloads</string>
+    <string name="title_whatsapp">Whatsapp</string>
+
+    <string name="whatsapp_download">Whatsapp Status Downloader</string>
+    <string name="no_status">No status is available. Watch any status update and come back here!</string>
+    <string name="StatusParsing">Parsing Statuses</string>
+
+    <string name="enter_url">Search or Type URL</string>
+
+    <string name="msg_share">Download this awesome all video downloader app!</string>
+    <string name="app_link">https://play.google.com/store</string>
+
+    <string name="no_history">No History</string>
+    <string name="history">History</string>
+    <string name="delete">Delete</string>
+    <string name="open_url">Open Url</string>
+    <string name="copy_url">Copy Url</string>
+    <string name="copy_msg">URL Copied</string>
+    <string name="video">Videos</string>
+    <string name="share">Share</string>
+    <string name="shareus">Share Us</string>
+    <string name="moreapp">More App</string>
+    <string name="share_msg">Check this awesome free Hack SocialMedia. You can download video from 100+ websites.</string>
+    <string name="go_to_folder">Location</string>
+    <string name="rename">Rename</string>
+    <string name="download">Download</string>
+    <string name="speed_0">Speed: 0KB/s</string>
+    <string name="remaining_undefine">Remaining: —</string>
+    <string name="empty_download_list">Do you want to clear this list?</string>
+
+    <string name="settings">Settings</string>
+    <string name="vibrate">Vibrate on Download Complete</string>
+    <string name="sound">Sound on Download Complete</string>
+    <string name="browser">Browser</string>
+    <string name="ad_blocker">Ad Blocker</string>
+    <string name="help">Help</string>
+    <string name="rate">Rate Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_link">https://en.wikipedia.org/wiki/Privacy_policy</string>
+
+    <!--
+    <string name="privacy_policy_msg">Video Downloader without Login is for downloading videos from social media apps.
+        This SERVICE is provided at no cost and is supported by Ads.
+        &lt;br /&gt;The app does use third party services that may collect information used to identify you.
+        &lt;br /&gt;This Service may contain links to other sites. If you click on a third-party link,
+        you will be directed to that site. Note that these external sites are not operated by me.
+        Therefore, I strongly advise you to review the Privacy Policy of these websites.
+        &lt;br /&gt;Video downloader app helps you to download videos from various websites but not Youtube.
+        &lt;br /&gt;&lt;a href="https://en.wikipedia.org/wiki/Privacy_policy">Read Full Privacy Policy&lt;/a&gt;
+    </string>
+    -->
+
+    <string-array name="blocked_sites">
+        <item>youtube.com</item>
+    </string-array>
+
+</resources>
